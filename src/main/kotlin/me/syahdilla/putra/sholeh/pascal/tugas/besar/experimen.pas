@@ -5,13 +5,12 @@
  *)
 program experimen;
 
-uses crt;
-
 var r,r1,r2:real;
   i     : integer;
   s, s1     : Char;
   st,s2:string;
 
+// build=silent
 begin
 
   s := pred('f');
@@ -64,8 +63,7 @@ begin
   r := r2;
   r := r1 - r2;
   r := r * r1;
-  ReadLn();
-  gotoxy(15, 1);
+  //gotoxy(15, 1);
   writeln('25: ', r: 0: 0);
   readln();
 end.
