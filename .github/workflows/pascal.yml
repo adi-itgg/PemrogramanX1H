@@ -1,0 +1,26 @@
+name: Pascal CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Installing FPC
+      run: |
+        sudo apt update
+        sudo apt install -y fpc
+      
+    - name: Building executable
+      run: |
+        mkdir -p build/cache
+        shopt -s globstar
+        for file in ./**/*.pas; do fpc ${file} -obuild/cache/${file##*/}.exe ; done && rm -rf build/cache/*
