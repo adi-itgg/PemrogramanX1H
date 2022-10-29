@@ -12,7 +12,7 @@ const a = 9;
 type TMap = specialize TFPGMap<String, Integer>;
 var data  : TMap;
     c     : char;
-
+// test verified
 // runexe=2
 // build=silent
 begin

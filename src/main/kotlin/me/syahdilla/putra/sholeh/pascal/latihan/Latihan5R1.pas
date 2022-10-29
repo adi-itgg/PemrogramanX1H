@@ -10,7 +10,7 @@ var
   jabatan: string;
   Gaji: longint;
   total, Tunj, ppn: real;
-
+// test verified
 begin
 
   write('Nama Karyawan     : ');

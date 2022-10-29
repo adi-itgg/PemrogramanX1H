@@ -8,7 +8,7 @@ var Luas      :  real;
   P,L,A, T    :  integer;
   jenis       :  char;
   ket         :  string[8];
-
+// test verified
 // runexe=2
 // build=silent
 begin

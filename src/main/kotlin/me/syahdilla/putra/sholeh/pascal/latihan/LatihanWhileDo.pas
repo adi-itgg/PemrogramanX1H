@@ -10,7 +10,7 @@ var
   n, i, jum: integer;
   rata: real;
   lagi: char;
-
+// test verified
 // build=silent
 begin
   //clrscr;

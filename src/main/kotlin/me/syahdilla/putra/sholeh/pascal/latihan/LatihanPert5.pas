@@ -10,6 +10,7 @@ var
   jabatan: string;
   Gaji: longint;
   total, Tunj, ppn, gajibersih: real;
+// test verified
 begin
   //clrscr;
   write('Nama Karyawan     : ');

@@ -10,7 +10,7 @@ var
   nama, diskonStr               : string;
   mAnggota, tBelanja            : longint;
   tBayar, potongan, diskon      : real;
-
+// test verified
 // runexe=3
 // build=silent
 begin

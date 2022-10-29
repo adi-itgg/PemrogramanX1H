@@ -9,7 +9,7 @@ uses crt;
 var r,r1,r2:real;
   i:integer;
   s,s1,s2:string;
-
+// test verified
 // build=silent
 begin
   s := pred('f');

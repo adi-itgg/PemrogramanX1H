@@ -9,7 +9,7 @@ var r,r1,r2:real;
   i     : integer;
   s, s1     : Char;
   st,s2:string;
-
+// test verified
 // build=silent
 begin
 

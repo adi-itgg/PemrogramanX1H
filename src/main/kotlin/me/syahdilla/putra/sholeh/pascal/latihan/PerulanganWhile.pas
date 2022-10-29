@@ -8,7 +8,7 @@ program PerulanganWhile;
 
 var
   i, m, n, jumlah: integer;
-
+// test verified
 // runexe=2
 // build=silent
 begin
