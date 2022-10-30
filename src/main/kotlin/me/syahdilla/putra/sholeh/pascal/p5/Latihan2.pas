@@ -2,15 +2,16 @@
  * Project: PemrogramanX1H
  * Date: 01/10/2022
  *)
-program LatihanPert5;
+program Latihan2;
 
 //uses crt;
 var
   nama: string[20];
   jabatan: string;
   Gaji: longint;
-  total, Tunj, ppn, gajibersih: real;
-// test verified
+  total, Tunj, ppn: real;
+
+// build=silent
 begin
   //clrscr;
   write('Nama Karyawan     : ');
