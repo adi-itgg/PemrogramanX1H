@@ -23,19 +23,19 @@ jobs:
       run: |
         mkdir -p build/cache
         shopt -s globstar
-        for file in ./**/*Test.pas; do fpc -Tlinux ${file} -obuild/cache/${file##*/} ; done
+        for file in src/**/*Test.pas; do fpc -Tlinux ${file} -obuild/cache/${file##*/}.test ; done
         
     - name: Test run programs
       run: |
         echo -e "\n\n=============== Running test programs ===============\n\n"
-        for file in build/cache/*; do fpc -Tlinux ${file} -obuild/cache/${file##*/} && ./build/cache/${file##*/} && echo -e "\n\n" ; done
+        for file in build/cache/*; do ./build/cache/${file##*/}.test && echo -e "\n\n" ; done
         echo -e "\n\n=============== Running test programs ===============\n\n"
       
     - name: Building pascal programs
       run: |
         mkdir -p build/cache
         shopt -s globstar
-        for file in ./**/*.pas; do fpc -Tlinux ${file} -obuild/cache/${file##*/} ; done
+        for file in src/**/*.pas; do fpc -Tlinux ${file} -obuild/cache/${file##*/} ; done
         
     - name: Cleaning all build ouputs
       run: rm -rf build/cache/*
