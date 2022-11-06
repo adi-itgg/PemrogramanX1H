@@ -3,23 +3,28 @@
  * User: Syahdilla
  * Date: 23/10/2022
  *)
-program soal5;
-uses crt;
+program experimenTest;
+
 var r,r1,r2:real;
-  i:integer;
-  s,s1,s2:string;
+  i     : integer;
+  s, s1     : Char;
+  st,s2:string;
 // test verified
 // build=silent
 begin
+
   s := pred('f');
   s1 := pred('3');
   s2 := 'PASCAL';
+
   writeln('1 : ', s, s1);
   writeln('2 :', succ(s2[3]));
   writeln('3 : ', succ('j'));
-  s := 'UNINDRA';
-  writeln('4 : ', ord(s[5]));
+
+  st := 'UNINDRA';
+  writeln('4 : ', ord(st[5]));
   writeln('5 : ', ord('5'));
+
   r := 201.456;
   r1 := 5.5106;
   writeln('6 : ', trunc(r));
@@ -36,18 +41,22 @@ begin
   writeln('17: ', exp(round(frac(r))): 0: 2);
   writeln('18: ', ln(exp(round(frac(r)))): 0: 2);
   writeln('19: ', cos(round(r1) - 6): 0: 2);
+
   i := 10;
   dec(i, 7);
   dec(i);
   writeln('20: ', i);
+
   inc(i);
   inc(i, 7);
   writeln('21: ', i);
   writeln('22: ', odd(i));
   writeln('23: ', odd(i + 1));
+
   r := 10;
   r := r * 10;
   writeln('24: ', r: 0: 0);
+
   r := 3;
   r1 := 5;
   r2 := 4;
@@ -56,5 +65,4 @@ begin
   r := r * r1;
   //gotoxy(15, 1);
   writeln('25: ', r: 0: 0);
-  readln;
 end.

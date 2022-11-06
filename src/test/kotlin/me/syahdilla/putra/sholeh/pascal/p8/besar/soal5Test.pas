@@ -3,7 +3,8 @@
  * User: Syahdilla
  * Date: 23/10/2022
  *)
-program soal5;
+program soal5Test;
+
 uses crt;
 var r,r1,r2:real;
   i:integer;
@@ -56,5 +57,4 @@ begin
   r := r * r1;
   //gotoxy(15, 1);
   writeln('25: ', r: 0: 0);
-  readln;
 end.

@@ -1,7 +1,15 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+package me.syahdilla.putra.sholeh
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main(args: Array<String>) {
+    println("Materi kuliah pemrograman 1!")
 }
+
+/*
+6.1. PRED(fungsi)
+Memberikan nilai sebelum nilai argumen dalam urutannya dalam ASCII.
+Sintaks: PRED(x);
+
+6.2. SUCC(fungsi)
+Memberikan nilai sesudah nilai argumen dalam urutannya dalam ASCII.
+Sintaks: SUCC(x);
+ */

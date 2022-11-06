@@ -3,7 +3,7 @@
  * User: Syahdilla
  * Date: 01/10/2022
  *)
-program Latihan5R1;
+program Latihan5R1Test;
 
 var
   nama: string[20];
@@ -14,10 +14,11 @@ var
 // build=silent
 begin
 
-  write('Nama Karyawan     : ');
-  readln(nama);
-  write('Masukkan Jabatan  : ');
-  readln(jabatan);
+  nama := 'Syahdilla Putra Sholeh';
+  jabatan := 'direktur';
+
+  writeln('Nama Karyawan     : ', nama);
+  writeln('Masukkan Jabatan  : ', jabatan);
 
 
   case (LowerCase(jabatan)) of

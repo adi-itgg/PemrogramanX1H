@@ -3,7 +3,7 @@
  * User: Syahdilla
  * Date: 30/10/2022
  *)
-program Latihan;
+program Latihan1Test;
 uses sysutils;
 
 var i, inc, lim       : Integer;
@@ -15,8 +15,11 @@ begin
   inc  := 0;
   temp := '';
 
-  Write('Input kelipatan yang diinginkan : '); ReadLn(i);
-  Write('Input limit kelipatan yang diinginkan : '); ReadLn(lim);
+  i := 2;
+  lim := 200;
+
+  Write('Input kelipatan yang diinginkan : ', i);
+  Write('Input limit kelipatan yang diinginkan : ', lim);
 
   repeat
     begin

@@ -3,7 +3,7 @@
  * User: Syahdilla
  * Date: 30/10/2022
  *)
-program Latihan;
+program Latihan1Test;
 
 // build=silent
 begin
