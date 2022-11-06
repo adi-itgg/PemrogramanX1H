@@ -28,7 +28,7 @@ jobs:
     - name: Test run programs
       run: |
         echo -e "\n\n=============== Running test programs ===============\n\n"
-        for file in build/cache/*; do ./build/cache/${file##*/}.test && echo -e "\n\n" ; done
+        for file in build/cache/*pas.test; do ./build/cache/${file##*/} && echo -e "\n\n" ; done
         echo -e "\n\n=============== Running test programs ===============\n\n"
       
     - name: Building pascal programs
