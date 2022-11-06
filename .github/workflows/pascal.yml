@@ -19,8 +19,14 @@ jobs:
         sudo apt update
         sudo apt install -y fpc
       
-    - name: Building executable
+    - name: Building pascal programs
       run: |
         mkdir -p build/cache
         shopt -s globstar
-        for file in ./**/*.pas; do fpc ${file} -obuild/cache/${file##*/}.exe ; done && rm -rf build/cache/*
+        for file in ./**/*.pas; do fpc -Tlinux ${file} -obuild/cache/${file##*/} ; done && rm -rf build/cache/*
+        
+    - name: Building & run test pascal programs
+      run: |
+        mkdir -p build/cache
+        shopt -s globstar
+        for file in ./**/*Test.pas; do fpc -Tlinux ${file} -obuild/cache/${file##*/} && ./build/cache/${file##*/} ; done && rm -rf build/cache/*
