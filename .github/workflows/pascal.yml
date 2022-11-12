@@ -23,7 +23,7 @@ jobs:
       run: |
         mkdir -p build/cache
         shopt -s globstar
-        for file in src/**/*Test.pas; do fpc -Tlinux ${file} -obuild/cache/${file##*/}.test ; done
+        for file in src/**/*Test.pas; do file=$(sed 's/\//'"."'/g' <<<"${file#*/}") && fpc -Tlinux ${file} -obuild/cache/${file##*/}.test ; done
         
     - name: Test run programs
       run: |
