@@ -24,6 +24,6 @@ begin
   gajiBersih := gajiPokok + tunjangan - pajak;
 
   // output
-  Write('Gaji bersih yang diterima oleh ', nama, ' adalah sebesar ', gajiBersih:2:0);
+  Write('Gaji bersih yang diterima oleh ', nama, ' adalah sebesar ', gajiBersih:0:0);
 
 end.

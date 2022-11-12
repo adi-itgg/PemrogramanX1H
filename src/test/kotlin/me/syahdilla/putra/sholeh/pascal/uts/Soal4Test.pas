@@ -12,6 +12,8 @@ begin
 
   bil1 := 30;
   bil2 := 30;
+  WriteLn('Bilangan Pertama = ', bil1);
+  WriteLn('Bilangan Kedua = ', bil2);
 
   if bil1 = bil2 then
     result := 0

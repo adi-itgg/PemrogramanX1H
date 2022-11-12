@@ -13,6 +13,8 @@ begin
   // inputs
   uang := 1730;
   pembulatan := 50;
+  WriteLn('Nominal = ', uang);
+  WriteLn('Pembulatan = ', pembulatan);
 
   // proses
   while i < uang do

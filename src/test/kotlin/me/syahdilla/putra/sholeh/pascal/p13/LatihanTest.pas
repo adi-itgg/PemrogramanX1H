@@ -20,6 +20,7 @@ begin
   benar := 0;
   salah := 0;
   jumlah_soal := random(10) + 5;
+  writeln('Input jumlah soal : ', jumlah_soal);
   for counter := 1 to jumlah_soal do
   begin
     a := random(100);

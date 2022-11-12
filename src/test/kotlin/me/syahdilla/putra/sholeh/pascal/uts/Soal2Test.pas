@@ -17,6 +17,8 @@ begin
   // inputs
   nama := 'Donal Duck';
   gajiPokok := 5000000;
+  WriteLn('Nama Karyawan: ', nama);
+  WriteLn('Gaji Pokok: ', gajiPokok:0:0);
 
   // process
   tunjangan := gajiPokok * 0.2;
@@ -24,6 +26,6 @@ begin
   gajiBersih := gajiPokok + tunjangan - pajak;
 
   // output
-  Write('Gaji bersih yang diterima oleh ', nama, ' adalah sebesar ', gajiBersih:2:0);
+  Write('Gaji bersih yang diterima oleh ', nama, ' adalah sebesar ', gajiBersih:0:0);
 
 end.
