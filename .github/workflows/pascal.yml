@@ -19,14 +19,24 @@ jobs:
         sudo apt update
         sudo apt install -y fpc
       
+    - name: Building test pascal programs
+      run: |
+        mkdir -p build/cache
+        shopt -s globstar
+        for file in src/**/*Test.pas; do fpc -Tlinux ${file} -obuild/cache/${file##*/}.test ; done
+        
+    - name: Test run programs
+      run: |
+        echo -e "\n\nSTART ################### Running test programs ################### START\n\n"
+        for file in build/cache/*pas.test; do echo -e "START ================= ${file##*/}================= START\n" && ./build/cache/${file##*/} && echo -e "\nEND ================= ${file##*/}================= END\n\n" ; done
+        echo -e "\n\nEND ################### Running test programs ################### END\n\n"
+      
     - name: Building pascal programs
       run: |
         mkdir -p build/cache
         shopt -s globstar
-        for file in ./**/*.pas; do fpc -Tlinux ${file} -obuild/cache/${file##*/} ; done && rm -rf build/cache/*
+        for file in src/**/*.pas; do fpc -Tlinux ${file} -obuild/cache/${file##*/} ; done
         
-    - name: Building & run test pascal programs
-      run: |
-        mkdir -p build/cache
-        shopt -s globstar
-        for file in ./**/*Test.pas; do fpc -Tlinux ${file} -obuild/cache/${file##*/} && ./build/cache/${file##*/} ; done && rm -rf build/cache/*
+    - name: Cleaning all build ouputs
+      run: rm -rf build/cache/*
+        
