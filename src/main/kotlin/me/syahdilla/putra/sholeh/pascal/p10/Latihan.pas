@@ -29,5 +29,5 @@ begin
         end;
       temp := temp + IntToStr(inc) + ' ';
     end;
-  until inc >= lim
+  until inc >= lim;
 end.
