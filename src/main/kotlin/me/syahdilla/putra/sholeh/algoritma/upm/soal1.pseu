@@ -1,0 +1,23 @@
+
+Algoritma UPM_SOAL_1
+Variable
+    Nama    : String
+    jhari_kerja, jjam_lembur, Upah, Uang_lembur, trans_lembur, Gaji    : LongInt
+
+Mulai
+input (Nama, jhari_kerja, jjam_lembur)
+
+Upah <- jhari_kerja * 30000
+Uang_lembur <- jhari_lembur * 5000
+
+if (jjam_lembur > 10) then
+    trans_lembur <- (10/100) * Uang_lembur
+else
+    trans_lembur <- 0
+endif
+
+Gaji <- Upah + Uang_lembur + trans_lembur
+
+output (Nama)
+output (Gaji)
+Selesai

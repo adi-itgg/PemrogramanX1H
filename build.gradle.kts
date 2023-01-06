@@ -14,6 +14,8 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+
+    runtimeOnly("org.jetbrains.kotlin:kotlin-reflect:1.8.0")
 }
 
 tasks.test {

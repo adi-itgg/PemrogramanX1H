@@ -26,6 +26,6 @@ begin
   if jenisBBM = 1 then bayar := 7650 else bayar := 9000;
   bayar := bayar * totalBBM;
 
-  WriteLn('Biaya yang harus dibayar adalah ', bayar)
+  WriteLn('Biaya yang harus dibayar adalah ', bayar);
 
 end.

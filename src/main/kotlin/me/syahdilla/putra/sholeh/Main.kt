@@ -1,8 +1,44 @@
 package me.syahdilla.putra.sholeh
 
+import me.syahdilla.putra.sholeh.algoritma.upm.KisiUPMAlgoritmaJanuari2023
+
 fun main(args: Array<String>) {
-    println("Materi kuliah pemrograman 1!")
+    println()
+
+    KisiUPMAlgoritmaJanuari2023.printFields()
 }
+
+
+inline fun<reified T : Any> T.printFields() {
+    this::class.java.declaredFields.forEach {
+        if (it.name == "INSTANCE") return@forEach
+        it.isAccessible = true
+
+        val name = "${this::class.java.simpleName} - ${it.name}"
+
+        val pStart = "START =============== $name =============== START"
+        println(pStart)
+
+        @Suppress("UNCHECKED_CAST")
+        val value = try {
+            (it.get(this) as () -> String)()
+        } catch (e: ClassCastException) {
+            StringBuilder().apply(it.get(this) as StringBuilder.() -> Unit).toString()
+        }
+
+        println(value)
+
+        val sb = StringBuilder()
+        for (i in 1..(pStart.length))
+            sb.append("-")
+
+
+        println(sb)
+        println()
+        println()
+    }
+}
+
 
 /*
 6.1. PRED(fungsi)

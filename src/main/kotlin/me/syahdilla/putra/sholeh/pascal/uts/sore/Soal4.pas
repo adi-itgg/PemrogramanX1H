@@ -9,10 +9,7 @@ var count, inp, total, ganjil, genap         : Integer;
 
 // build=silent
 begin
-  count := 0;
-  total := 0;
-  ganjil := 0;
-  genap := 0;
+  count := 0; total := 0; ganjil := 0; genap := 0;
   repeat
     begin
       Write('Input bilangan ke-1  : '); ReadLn(inp);
