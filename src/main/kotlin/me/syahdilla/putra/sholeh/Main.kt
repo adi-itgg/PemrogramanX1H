@@ -1,6 +1,7 @@
 package me.syahdilla.putra.sholeh
 
 import me.syahdilla.putra.sholeh.algoritma.upm.KisiUPMAlgoritmaJanuari2023
+import me.syahdilla.putra.sholeh.algoritma.upm.Soal
 
 fun main(args: Array<String>) {
     println()
@@ -23,7 +24,7 @@ inline fun<reified T : Any> T.printFields() {
         val value = try {
             (it.get(this) as () -> String)()
         } catch (e: ClassCastException) {
-            StringBuilder().apply(it.get(this) as StringBuilder.() -> Unit).toString()
+            StringBuilder().apply(it.get(this) as Soal).toString()
         }
 
         println(value)
