@@ -66,9 +66,9 @@ object KisiUPMAlgoritmaJanuari2023 {
         val data = mutableMapOf<Int, Int>() // map untuk menyimpan data di line 1
         var x = 5 // x = 5 karena max baris kanan 5 huruf
         for (i in 0..5) { // sama seperti x
-            for (j in 1..x) { // buat huruf di satu baris
-                if (j == 1 && isNotEmpty) appendLine() // buat baris baru kalau data tidak kosong
-                val calc = (data[j] ?: j).run {
+            for (kolom in 1..x) { // buat huruf di satu baris
+                if (kolom == 1 && isNotEmpty) appendLine() // buat baris baru kalau data tidak kosong
+                val calc = (data[kolom] ?: kolom).run {
                     if (i == 0)
                         return@run this + 1 // kalau baris 1 kita tambah 1 saja
                     this + 2 // kalau lebih dari baris 1 kita tambah 2
@@ -76,7 +76,7 @@ object KisiUPMAlgoritmaJanuari2023 {
 
                 this tampilkan "$calc\t" // tampilkan hasil output hurufnya \t untuk tab agar lebih rapih
 
-                data[j] = calc // simpan data calc ke map
+                data[kolom] = calc // simpan data calc ke map
             }
             x -= 1 // x di kurang satu karena huruf di barus makin lama makin sedikit
         }
