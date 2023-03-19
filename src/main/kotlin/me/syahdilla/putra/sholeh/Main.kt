@@ -6,9 +6,33 @@ import me.syahdilla.putra.sholeh.algoritma.upm.Soal
 fun main(args: Array<String>) {
     println()
 
-    KisiUPMAlgoritmaJanuari2023.printFields()
+    //KisiUPMAlgoritmaJanuari2023.printFields()
+    algoSoal1()
 }
 
+fun algoSoal1(npm: Int = 3) {
+    var a = npm
+    a += 1
+    var d = (14 + a * 2) div 2
+    d -= a
+    var b = 0
+    var c = 1
+    while (c <= d) {
+        if (d div 2 == 0) b += 1
+        c += 1
+    }
+
+    write(b)
+    write(d)
+    if (b == 2)
+        write("UNIVERSITAS")
+    else
+        write("INDRAPRASTA")
+    // hasil: 0-4INDRAPRASTA
+}
+
+fun write(msg: Any?) = print(msg)
+infix fun Int.div(other: Int) = mod(other)
 
 inline fun<reified T : Any> T.printFields() {
     this::class.java.declaredFields.forEach {

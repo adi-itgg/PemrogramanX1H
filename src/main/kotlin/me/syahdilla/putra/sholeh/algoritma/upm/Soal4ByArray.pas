@@ -32,7 +32,7 @@ begin
     // kurangi x agar output sesuai yang di inginkan seperti anak tangga terbalik
     x -= 1;
     // kalau i lebih kecil dari 5 buat baris baru
-    // kenapa? supaya output lebih rapi tidak kelebihan barus baru di akhir program
+    // kenapa? supaya output lebih rapi tidak kelebihan baris baru di akhir program
     if i < 5 then WriteLn();
   end;
 
