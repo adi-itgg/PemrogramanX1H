@@ -3,7 +3,7 @@
  * User: Syahdilla
  * Date: 23/11/2022
  *)
-program Soal1;
+program SoalP5;
 
 // cara mendeklarasikan konstanta
 const KONSTANTA = 'TIPE DATA TULISAN';

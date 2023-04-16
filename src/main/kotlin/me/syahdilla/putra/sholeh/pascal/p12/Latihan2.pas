@@ -3,7 +3,7 @@
  * User: Syahdilla
  * Date: 06/11/2022
  *)
-program Latihan2;
+program SoalP5;
 
 var i, lim, total     : Integer;
 

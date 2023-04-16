@@ -3,7 +3,7 @@
  * User: Syahdilla
  * Date: 12/11/2022
  *)
-program Soal1;
+program SoalP5;
 
 // diff between const and var
 const const1 = 'VALUE TETAP DAN TIDAK BISA DI UBAH!';

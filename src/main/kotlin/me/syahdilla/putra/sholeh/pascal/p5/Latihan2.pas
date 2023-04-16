@@ -2,7 +2,7 @@
  * Project: PemrogramanX1H
  * Date: 01/10/2022
  *)
-program Latihan2;
+program SoalP5;
 
 //uses crt;
 var
