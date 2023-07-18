@@ -21,7 +21,7 @@ begin
 end;
 
 var
-  data: array[0..4] of Int64 = (5, 2, 8, 1, 9);
+  data: array[0..4] of Int64 = (46, 90, 18, 72, 45);
   i: Integer;
 
 begin
