@@ -27,17 +27,15 @@ end;
 
 begin
   Randomize;
-  n := 20;
+  n := Length(data) - 1;
   b := 0;
   s := 100;
   total := 0;
 
-  for i := 0 to n do
-    data[i] := Random(100) + 1;
-
   Write('data yang diinput: ');
   for i := 0 to n do
   begin
+    data[i] := Random(100) + 1;
     if b < data[i] then b := data[i];
     if s > data[i] then s := data[i];
     Write(data[i], ' ');

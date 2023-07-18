@@ -5,10 +5,9 @@
  *)
 program Soal2;
 
-procedure BubbleSortDescending(var arr: array of Int64);
+procedure BubbleSortDescending(arr: array of Int64);
 var
-  i, j: Integer;
-  temp: Int64;
+  i, j: Integer; temp: Int64;
 begin
   for i := Length(arr) - 1 downto 1 do
     for j := 0 to i - 1 do
@@ -27,6 +26,6 @@ var
 begin
   BubbleSortDescending(data);
 
-  for i := 0 to 4 do
+  for i := 0 to Length(data) - 1 do
     Write(data[i], ' ');
 end.
